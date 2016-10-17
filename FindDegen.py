@@ -247,7 +247,8 @@ def ParseAndPair(kmers,MinDist = 150, MaxDist = 400):
             
 z = ParseAndPair(ToRank)
 
-
+#Consider an alternative approach using entropy (https://www.biostars.org/p/3856/)
+#Degap the alignment first, then compute entropy, and find low entropy stretches
 #need to penalize degeneracy more heavily   
 
 
@@ -272,4 +273,4 @@ z = ParseAndPair(ToRank)
 #or + n-len, set n to 2 so two fold degeneracy is neutral, one fold positve, 3 and four are -ve
 #multiply the whole lot by 1-numgaps
 #score = n - len + fraction - gaps, default n = 2      
-#write a function that checks the number of sequences to which a primer successully anneals     
+#write a function that checks the number of sequences to which a primer successully anneals    
